@@ -41,12 +41,14 @@ INSTALLED_APPS = [
 
 
     'rest_framework',
+    'channels',
 
     'Auth_app',
     'Form_app',
     'Session_app',
     'JWT_app',
     'Signals_app',
+    "Channels_app",
 ]
 
 MIDDLEWARE = [
@@ -77,7 +79,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mysite.wsgi.application'
+# WSGI_APPLICATION = 'mysite.wsgi.application'
+ASGI_APPLICATION = 'mysite.asgi.application'
 
 
 # Database
