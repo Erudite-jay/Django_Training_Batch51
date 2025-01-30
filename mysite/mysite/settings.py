@@ -41,14 +41,14 @@ INSTALLED_APPS = [
 
 
     'rest_framework',
-    'channels',
+    # 'channels',
 
     'Auth_app',
     'Form_app',
     'Session_app',
     'JWT_app',
-    'Signals_app',
-    "Channels_app",
+    # 'Signals_app',
+    # "Channels_app",
 ]
 
 MIDDLEWARE = [
@@ -79,8 +79,8 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'mysite.wsgi.application'
-ASGI_APPLICATION = 'mysite.asgi.application'
+WSGI_APPLICATION = 'mysite.wsgi.application'
+# ASGI_APPLICATION = 'mysite.asgi.application'
 
 
 # Database
@@ -129,10 +129,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "Static"), 
-)
+
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, "static"), 
+# )
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
